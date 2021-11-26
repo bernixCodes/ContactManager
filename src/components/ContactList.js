@@ -7,7 +7,7 @@ function ContactList({contacts}) {
         return(
          <div className=' d-inline-flex justify-content-around me-3' >
              <div className='col-md-auto' >
-               <ContactCard contact ={contact}/>
+               <ContactCard key={contact.name} contact ={contact}/>
              </div>
         </div>
         )

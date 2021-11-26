@@ -40,15 +40,15 @@ function AddContact(props) {
             <h2 className='mt-3 mb-2'>Add Contact</h2>
               <form onSubmit={addContact}>
                 <div className="mb-3">
-                    <label for="name" className="form-label">Name</label>
+                    <label  className="form-label">Name</label>
                     <input type="text" value={name} className="form-control" id="name"  onChange={handleName}/> 
                 </div>
                 <div className="mb-3">
-                    <label for="contact" className="form-label">Phone Number</label>
+                    <label  className="form-label">Phone Number</label>
                     <input type="number" value={phone} className="form-control" id="contact"  onChange={handleNumber}/>
                 </div>
                 <div className="mb-3">
-                    <label for="email" className="form-label">Email Address</label>
+                    <label  className="form-label">Email Address</label>
                     <input type="email" value={email} className="form-control" id="email" onChange={handleEmail} />
                 </div>
                 <button type="submit" className="btn btn-primary">Add</button>

@@ -1,7 +1,8 @@
 import React from 'react'
 import user from '../images/user.png';
 
-function ContactCard({contact}) {
+function ContactCard({contact,deleteContact}) {
+
     return (
     <div className="card" style={{width:'18rem', marginTop:'10px'}}>
         <img className="card-img-top" src={user} alt='' style={{width:'60px',display:'flex', justifyContent: 'center', alignSelf:'center'}}/>
@@ -13,7 +14,7 @@ function ContactCard({contact}) {
             <p className="card-text">
                 <span className='font-weight-bold'>Email Address: </span> {contact.email}
             </p>
-            <i className="far fa-trash-alt" style={{display: 'flex', justifyContent:'flex-end', color: 'red'}}></i>
+            <i className="far fa-trash-alt" onClick={() =>deleteContact(contact.id)} style={{display: 'flex', justifyContent:'flex-end', color: 'red'}}></i>
        </div>
    </div>
     )

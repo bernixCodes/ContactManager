@@ -38,7 +38,7 @@ function AddContact(props) {
          setEmail('')
          setTimeout(()=>{
              navigate('/')
-         }, 3000)
+         }, 2000)
 
          ;
        

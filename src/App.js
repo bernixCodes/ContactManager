@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Routes, Route} from "react-router-dom";
 import Header from './components/Header/Header';
 import AddContact from './components/AddContact';
 import ContactList from './components/ContactList';
+import ContactDetail from './components/CardDetail';
 import './App.css';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -46,6 +47,8 @@ function App() {
               path='/add'
               element={ <AddContact newContactDetail = {newContactDetail} />}
               />
+
+              <Route path='/contact/:id' element={<ContactDetail/>}/>
            </Routes>
       </Router>
     

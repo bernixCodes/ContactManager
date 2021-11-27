@@ -12,9 +12,8 @@ function ContactList({contacts,removeContact}) {
     const contactList = contacts.map(contact =>{
         return(
          <div className=' d-inline-flex justify-content-around me-3' >
-             <div className='col-md-auto' >
-                 
-               <ContactCard key={contact.id} contact ={contact} deleteContact={deleteContact}/>
+             <div key={contact.id} >
+               <ContactCard  contact ={contact} deleteContact={deleteContact}/>
              </div>
         </div>
         )

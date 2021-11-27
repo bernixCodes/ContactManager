@@ -1,9 +1,11 @@
 import React,{useState,useEffect} from 'react';
-import './App.css';
+import {BrowserRouter as Router,Routes, Route} from "react-router-dom";
 import Header from './components/Header/Header';
 import AddContact from './components/AddContact';
 import ContactList from './components/ContactList';
+import './App.css';
 import { v4 as uuidv4 } from 'uuid';
+
 function App() {
   const [contacts, setContacts] = useState([])
 
@@ -32,11 +34,21 @@ function App() {
  
  
   return (
-    <div className='container-fluid'>
-      <Header/>
-      <AddContact newContactDetail = {newContactDetail}/>
-      <ContactList contacts={contacts} removeContact={removeContact} />
-    </div>
+      <Router>
+         <Header/>
+         <Routes>
+           <Route
+              path='/' exact
+              element={ <ContactList contacts={contacts}  removeContact={removeContact}/>}
+              />
+
+             <Route
+              path='/add'
+              element={ <AddContact newContactDetail = {newContactDetail} />}
+              />
+           </Routes>
+      </Router>
+    
   );
 }
 
